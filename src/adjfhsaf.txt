@@ -1,0 +1,75 @@
+.custom-card-overlay {
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.247), rgba(0, 128, 0, 0.479), rgba(0, 0, 0, 0.493));
+}
+
+.explore-btn {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  margin: 0 auto !important;
+  padding: 10px 20px !important;
+  font-size: 1.125rem !important;
+  /* text-lg */
+  font-weight: 600 !important;
+  background-color: #000000 !important;
+  /* light gray */
+  color: #02d8aa !important;
+  border: 2px solid rgba(132, 0, 255, 1) !important;
+  border-radius: 50rem !important;
+  /* fully rounded */
+  overflow: hidden !important;
+  cursor: pointer !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  transition: color 0.3s ease !important;
+}
+
+.explore-btn::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(to right, #3494e6, #ec6ead) !important;
+  /* emerald green */
+  border-radius: 50% !important;
+  left: -100% !important;
+  top: 0 !important;
+  z-index: 1 !important;
+  transition: all 0.7s ease !important;
+  transform: scale(1) !important;
+}
+
+.explore-btn:hover::before {
+  left: 0 !important;
+  transform: scale(1.5) !important;
+}
+
+.explore-btn:hover {
+  color: #f8f9fa !important;
+  /* text-white on hover */
+}
+
+.explore-btn-icon {
+  z-index: 2;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  transform: rotate(-50deg) !important;
+  border: 1px solid rgba(132, 0, 255, 1) !important;
+  border-radius: 50% !important;
+}
+
+.explore-btn span {
+  z-index: 2;
+  font-size: 18px;
+}
+
+.explore-btn:hover .explore-btn-icon {
+  transform: rotate(0deg) !important;
+  color: #f5f5f5;
+  /* dark gray */
+}

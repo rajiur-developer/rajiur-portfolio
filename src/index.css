@@ -1,0 +1,427 @@
+body {
+  background-color: #131212 !important;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  color: orange !important;
+  position: relative;
+}
+
+
+/* Downloded Btn */
+.downlodedBtn:hover {
+  background-color: rgb(4, 80, 179) !important;
+  color: black;
+  transition: 0.5s ease;
+
+}
+
+.myNav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.281);
+}
+
+.myNav .border-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.myNav .border-effect:hover::after {
+  width: 100%;
+}
+
+.myNav .border-effect::after {
+  content: " ";
+  position: absolute;
+  transition: 1s ease;
+  width: 0%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: yellow;
+  border-radius: 10px;
+  /* display: none; */
+}
+
+.myNav a:hover {
+  color: yellow;
+  transition: 0.5s ease;
+}
+
+.myNav a:focus {
+  color: yellow;
+  transition: 0.5s ea;
+  color: yellow !important;
+  border-bottom: 2px solid;
+  border-radius: 10px;
+}
+
+.myNav a {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+}
+
+.myNav li {
+  margin-left: 20px;
+}
+
+.myNav li:first-child {
+  margin-left: 0px;
+}
+
+.behaviyar RiMenu3Line {
+  color: red;
+}
+
+/* Home Page css */
+.hero-text h1 span {
+  color: orange;
+}
+
+.typeHeader>p {
+  text-transform: uppercase;
+
+}
+
+.typing-animation {
+  color: orange;
+}
+
+.hero-image img {
+  border: 5px solid orange;
+  animation: imaheany 8.5s steps(70) infinite;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  /* box-shadow: 0px 0px 100px 43px yellow; */
+
+}
+
+@keyframes imaheany {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 0px 80px yellow;
+  }
+
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 80px rgb(3, 136, 138);
+  }
+
+  100% {
+    transform: scale(1);
+    /* box-shadow:  0px 0px 100px 43px rgb(16, 102, 242); */
+  }
+}
+
+/* About Me Css */
+.recent-work img {
+  transform: rotateY(180deg);
+  margin-left: 120px;
+  border-bottom: 2px solid yellow;
+  border-radius: 5px;
+  width: 300px;
+  padding-top: 50px;
+}
+
+@media (min-width: 380px) {
+  .btn.btn-primary.py-2.m-3.px-4.text-uppercase.fw-bold {
+    margin: 0px !important;
+  }
+
+  .myNav li:first-child {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typeHeader>p {
+    text-transform: uppercase;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    animation: typing 8.5s steps(70) infinite;
+  }
+
+  .recent-work img {
+    margin-left: 42px;
+    width: 225px;
+    padding-top: 0px;
+  }
+
+  .hero-image img {
+    width: 243px !important;
+    height: 250px !important;
+  }
+}
+
+/* Skill Card */
+/* 
+.my-card {
+  background: #2a2a2a !important;
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  height: 350px !important;
+  overflow-x: auto;
+}
+.my-card:hover {
+  box-shadow: 0 0px 17px rgba(143, 227, 19, 0.8);
+  border: 1px solid orange;
+  transform: scale(1.005) !important;
+} */
+
+/* About Page */
+
+.about-card {
+  background: transparent !important;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(132, 0, 255, 0.45) !important;
+  color: white !important;
+  box-shadow: 0 0px 20px rgba(234, 231, 231, 0.5) !important;
+  transition: all 0.3s ease;
+  overflow-x: auto;
+}
+
+.about-card:hover {
+  box-shadow: 0 0px 17px rgba(143, 227, 19, 0.8);
+  border: 1px solid orange;
+  transform: scale(1.005) !important;
+}
+
+/* Contact Form Css */
+.form-card {
+  background: transparent !important;
+  backdrop-filter: bulr(6px);
+  color: white !important;
+  box-shadow: 0 0px 20px 0 rgba(131, 161, 23, 0.5) !important;
+  transition: all 0.3s ease;
+  overflow-x: auto;
+}
+
+.form-card:hover {
+  box-shadow: 0 0px 17px rgba(143, 227, 19, 0.8);
+  border: 1px solid orange !important;
+  transform: scale(1.005) !important;
+}
+
+.form-card input {
+  color: white !important;
+}
+
+form .form-control:focus {
+  border-color: orange;
+  box-shadow: 0 0 5px orange;
+}
+
+form .input-group-text {
+  background-color: rgb(65, 60, 52) !important;
+  border-color: orange;
+}
+
+form .btn-primary {
+  background-color: rgb(43, 37, 27) !important;
+  border-color: orange;
+}
+
+form .btn-primary:hover {
+  background-color: rgb(41, 41, 40) !important;
+  border-color: darkorange;
+}
+
+form .btn-primary:focus {
+  box-shadow: 0 0 5px orange;
+}
+
+form .form-control {
+  background-color: #3a3a3a !important;
+  border-color: #555;
+}
+
+form .form-control::placeholder {
+  color: #0069fb !important;
+}
+
+form .form-control:hover {
+  border-color: orange;
+}
+
+form .input-group-text {
+  color: white !important;
+}
+
+form .input-group-text:hover {
+  background-color: darkorange;
+  border-color: darkorange;
+}
+
+form .input-group-text:focus {
+  box-shadow: 0 0 5px orange;
+}
+
+form .btn-primary:active {
+  background-color: rgb(52, 51, 50) !important;
+  border-color: darkorange;
+}
+
+/* Footer Css */
+.footer-costomize {
+  background: transparent !important;
+  backdrop-filter: blur(10px) !important;
+  color: white;
+  border-top: 1px solid;
+
+}
+
+/* Skill Bathch */
+.magic-bento-card {
+  height: 380px;
+  padding: 15px;
+
+}
+
+.skill-hover {
+  background-color: #1a1a1a !important;
+}
+
+.hover-effect {
+  transition: 0.5s ease-in-out;
+}
+
+.glass-card:hover .hover-effect {
+  transform: scale(1.3);
+}
+
+.skill-hover:hover {
+  background-color: #272727 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.skill-hover:hover .skill-icon {
+  transform: scale(1.2);
+}
+
+.skill-icon {
+  transition: transform 0.3s ease;
+}
+
+
+/* Project Count  */
+
+.project-count-section {
+  padding: 80px 0;
+
+}
+
+.project-count-section .card {
+    background: transparent !important;
+    box-shadow: 0 0px 20px 0px rgb(47 170 183 / 35%) !important;
+    transition: transform 0.35s ease-in-out, box-shadow 0.35s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* Card */
+.count-card {
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  overflow: hidden;
+ 
+}
+
+.count-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  border: 2px solid rebeccapurple;
+}
+
+/* ======================
+   COMMON GRADIENT 🔥
+====================== */
+.project-count-section {
+  padding: 80px 0;
+
+}
+
+.count-card {
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.count-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.55);
+}
+
+/* COUNT NUMBER GRADIENT */
+.count-number {
+  font-size: 52px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #df8908 50.41%, #b415ff 90.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plus {
+  font-size: 26px;
+  color: #fff;
+  margin-left: 4px;
+}
+
+.count-title {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.count-icon {
+  width: 46px;
+  height: 46px;
+}
+
+
+/* Plus sign */
+.plus {
+  font-size: 26px;
+  margin-left: 4px;
+  color: #ffffff;
+}
+
+/* Title */
+.count-title {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .count-number {
+    font-size: 42px;
+  }
+}
+
+
+
+/* Expreanse Section */
+
+.expreance-section{
+  background: transparent !important;
+  backdrop-filter: blur(5px) !important;
+  box-shadow: 0px 0px 20px 0px rgba(255, 166, 0, 0.589) !important;
+  border:solid orange !important;
+}
+
+/* Alart Section */
+.alert-section{
+  border: 1px solid orange !important;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 20px 0px rgba(255, 166, 0, 0.589) !important;
+}

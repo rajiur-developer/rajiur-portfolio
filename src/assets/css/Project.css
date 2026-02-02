@@ -1,0 +1,199 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --text-color: #1a1a1a;
+
+  --overlay-gradient: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 0.25),
+    rgba(0, 128, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+  );
+
+  --btn-bg: #ffffff;
+  --btn-text: #02d8aa;
+  --btn-border: rgba(132, 0, 255, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-bg: rgba(20, 20, 20, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-color: #eaeaea;
+
+    --overlay-gradient: linear-gradient(
+      to top,
+      rgba(132, 0, 255, 0.45),
+      rgba(0, 0, 0, 0.65)
+    );
+
+    --btn-bg: #000000;
+    --btn-text: #9ca3af;
+  }
+}
+
+.section-title {
+  color: var(--text-color);
+}
+
+/* ================= Glass Card ================= */
+
+.glass-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(132, 0, 255, 1);
+  cursor: pointer;
+}
+
+/* ================= Shared Image ================= */
+
+.custom-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* ================= Overlay ================= */
+
+.custom-card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--overlay-gradient);
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ================= Explore Button ================= */
+
+.explore-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 14px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 2px solid var(--btn-border);
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: color 0.3s ease;
+}
+
+.explore-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #3494e6, #ec6ead);
+  border-radius: 999px;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.explore-btn:hover::before {
+  transform: translateX(0);
+}
+
+.explore-btn span,
+.explore-btn-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.explore-btn:hover {
+  color: #ffffff;
+}
+
+.explore-btn-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--btn-border);
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover .project-icon {
+  transform: rotate(0deg);
+   color: #fffeff;
+}
+
+/* ================= Custom Card ================= */
+
+.custom-card {
+  position: relative;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  perspective: 1000px;
+  background-color: #111;
+  border: 2px solid rgba(132, 0, 255, 1);
+}
+
+.custom-card:hover .custom-card-img {
+  transform: scale(1.5);
+}
+
+.custom-card:hover .custom-card-overlay {
+  opacity: 1;
+}
+
+.custom-card h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.custom-card p {
+  font-size: 1rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.project-icon{
+  border: 1px solid white !important;
+  border-radius: 50%;
+  font-size: 28px;
+  transform: rotate(-45deg);
+  color: #ec6ead;
+}
+
+
+
+/* Project Banner */
+
+.ProjectWelcome{
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+  width: 100%;
+}
