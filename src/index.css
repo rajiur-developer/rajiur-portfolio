@@ -211,6 +211,10 @@ h2 {
 
 .form-card input {
   color: white !important;
+  
+}
+.form-card textarea {
+  color: white !important;
 }
 
 form .form-control:focus {
@@ -238,7 +242,7 @@ form .btn-primary:focus {
 }
 
 form .form-control {
-  background-color: #3a3a3a !important;
+  background-color: #3a3a3a4d !important;
   border-color: #555;
 }
 
@@ -258,7 +262,11 @@ form .input-group-text:hover {
   background-color: darkorange;
   border-color: darkorange;
 }
-
+.form-label{
+  border: 1px solid orange !important;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
 form .input-group-text:focus {
   box-shadow: 0 0 5px orange;
 }
