@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useCallback } from 'react';
 import gsap from 'gsap';
-import '../../assets/css/BlobCursor.css';
 
 export default function BlobCursor({
   blobType = 'circle',
