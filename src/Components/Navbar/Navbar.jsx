@@ -1,76 +1,49 @@
-import React from "react";
-import { Bounce, Fade, Roll, Zoom } from "react-reveal";
-// ধাপ ১: <a> ট্যাগের পরিবর্তে 'Link' ইম্পোর্ট করুন
-import { Link } from "react-router-dom";
-import { RiMenu3Line , RiCloseLine} from "react-icons/ri";
+"use client";
+
 import { useState } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
+const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Project", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
-const Navbar = () => {
-
-
-    const [isOpen, setIsOpen] = useState(false);
-
-  // Toggle control
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <Zoom>
-    <nav className="navbar navbar-expand-lg  myNav sticky-top">
+    <nav className="navbar navbar-expand-lg myNav sticky-top">
       <div className="container">
-        <Link className="navbar-brand text-warning fs-4" to="/">
-          <span className="text-primary fw-bold">{"<"}</span>Rajiur Rahman<span className="text-primary fw-bold">{"/>"}</span>
-        </Link>
+        <a className="navbar-brand text-warning fs-4" href="#home" onClick={closeMenu}>
+          <span className="text-primary fw-bold">{"<"}</span>Rajiur Rahman
+          <span className="text-primary fw-bold">{"/>"}</span>
+        </a>
         <button
-          className="navbar-toggler 
-          "
+          className="navbar-toggler border-0 shadow-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          // aria-controls="navbarNav"
-          // aria-expanded="false"
-          // aria-label="Toggle navigation"
-          onClick={handleToggle}
+          aria-controls="portfolioNavigation"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close navigation" : "Open navigation"}
+          onClick={() => setIsOpen((open) => !open)}
         >
-          <span className="text-light behaviyar fs-3 ">{
-            !isOpen? <span className="text-info"><RiMenu3Line /></span>:<span className="text-info"><RiCloseLine /></span> 
-            }</span>
+          <span className="text-info fs-3">
+            {isOpen ? <RiCloseLine /> : <RiMenu3Line />}
+          </span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="portfolioNavigation">
           <ul className="navbar-nav ms-auto">
-            {/* ধাপ ৩: আপনার App.js ফাইলে থাকা রুটের সাথে মিল রেখে লিঙ্কগুলো আপডেট করুন।
-              আপনার App.js এ '/about', '/project', '/contact' ইত্যাদি রুট আছে।
-            */}
-            <li className="nav-item border-effect">
-              <Link className="nav-link" aria-current="page" to="/">
-                Home
-              </Link>
-            </li>
-          
-              <li className="nav-item border-effect">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
+            {navItems.map((item) => (
+              <li className="nav-item border-effect" key={item.href}>
+                <a className="nav-link" href={item.href} onClick={closeMenu}>{item.label}</a>
               </li>
-              <li className="nav-item border-effect">
-                <Link className="nav-link" to="/project">
-                  Project
-                </Link>
-              </li>
-                        
-            <li className="nav-item border-effect">
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
+            ))}
           </ul>
         </div>
       </div>
     </nav>
-    </Zoom>
   );
-};
-
-export default Navbar;
+}
