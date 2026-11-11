@@ -1,16 +1,24 @@
-# React + Vite
+# Rajiur Rahman — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page developer portfolio built with Next.js App Router, React, Bootstrap, Framer Motion, GSAP, and OGL.
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install dependencies with `npm install`, then run `npm run dev`.
 
-## React Compiler
+Open http://localhost:3000.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Production
 
-## Expanding the ESLint configuration
+Run `npm run build` and then `npm start`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Portfolio sections
+
+- Home / Hero
+- About
+- Skills
+- Project showcase
+- Contact form (EmailJS)
+- Social links and footer
+
+The original portfolio components, images, resume, styling, and animations are retained while navigation uses in-page section anchors.
