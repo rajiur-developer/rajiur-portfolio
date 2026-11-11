@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { IoPerson, IoMail, IoPencil, IoSend } from "react-icons/io5";
-import { Zoom } from "react-reveal";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -58,7 +57,6 @@ const Contact = () => {
 
   return (
     <section className="py-5" id="contact">
-      <Zoom>
         <div className="container">
           {/* Section Header */}
           <div className="text-center mb-5">
@@ -194,7 +192,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </Zoom>
       <ToastContainer />
     </section>
   );
