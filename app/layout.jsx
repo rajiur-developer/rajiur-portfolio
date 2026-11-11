@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
 import "../src/index.css";
 import "../src/assets/css/BlobCursor.css";
 import "../src/assets/css/MagicBento.css";
