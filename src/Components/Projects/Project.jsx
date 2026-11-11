@@ -13,31 +13,31 @@ const skillData = [
   {
     title: "Weather-App-React",
     content: "Modern UI Design And Real-Time Data Update",
-    img: weather,
+    img: weather.src,
     link: "https://rajiur-weather.netlify.app/",
   },
   {
     title: "TODO App React",
     content: "Modern UI Design and Real-Time Data Update",
-    img: todo,
+    img: todo.src,
     link: "https://rajiur-todo.netlify.app/",
   },
   {
     title: "Portfolio Project",
     content: "Modern UI Project Using React Hooks",
-    img: portfolio,
+    img: portfolio.src,
     link: "https://rajiur-portfolio.netlify.app/",
   },
   {
     title: "Liberation War",
     content: "Responsive UI with HTML, CSS, JS",
-    img: Lebaration,
+    img: Lebaration.src,
     link: "https://rajiur-developer.github.io/LiberationWar/",
   },
   {
     title: "Agriculture Hub",
     content: "Single Page Application with React",
-    img: Agri,
+    img: Agri.src,
     link: "https://rajiur-developer.github.io/agriHub/",
   },
 ];
