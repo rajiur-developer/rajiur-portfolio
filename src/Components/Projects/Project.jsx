@@ -2,13 +2,12 @@
 import { useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import "../../assets/css/Project.css";
 
 import weather from "../../assets/Images/projectImg/weather-img.png";
-import todo from "../../assets/Images/projectImg/todo-img.png";
-import portfolio from "../../assets/Images/projectImg/portfolio-img.png";
-import Lebaration from "../../assets/Images/projectImg/Lebaretion-img.png";
-import Agri from "../../assets/Images/projectImg/Agri-img.png";
+import todo from "../../assets/Images/projectImg/todo-Img.png";
+import portfolio from "../../assets/Images/projectImg/portfolio-Img.png";
+import Lebaration from "../../assets/Images/projectImg/Lebaretion-Img.png";
+import Agri from "../../assets/Images/projectImg/Agri-Img.png";
 
 const skillData = [
   {
