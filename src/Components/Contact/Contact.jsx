@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { IoPerson, IoMail, IoPencil, IoSend } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
