@@ -61,7 +61,7 @@ export default function PortfolioPage() {
           <AboutMe />
         </section>
 
-        <section className="py-2" id="about">
+        <section className="py-2">
           <Detileme />
         </section>
 
