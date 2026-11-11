@@ -13,14 +13,11 @@ import {
   FaDownload
 } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import { useNavigate } from "react-router-dom";
 import CvBtn from "../CVbtn/CvBtn";
 
 const Detileme = () => {
-  const navigate = useNavigate();
-
   function handleContactClick() {
-    navigate("/contact");
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   }
 
   
@@ -50,7 +47,7 @@ const Detileme = () => {
               <div className="card about-card shadow-sm text-center p-4">
                 <div className="mb-3">
                   <img
-                    src={Heroimg}
+                    src={Heroimg.src}
                     alt="Profile"
                     className="img-fluid rounded-circle border border-4 border-warning shadow"
                     style={{
