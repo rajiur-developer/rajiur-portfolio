@@ -14,7 +14,7 @@ const AboutMe = () => {
                 animate={{ x: 0, opacity: 1 }} // শেষে কোথায় আসবে
                 transition={{ duration: 1.5 }} // কতো সময় নেবে  v>>
               >
-                <img src={Heroimg} alt="" />
+                <img src={Heroimg.src} alt="" />
               </motion.div>
             </div>
             <div className="col-lg-6">
